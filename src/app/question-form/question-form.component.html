@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col">
+    <div class="input-group mt-4 mb-4 p-2">
+      <input #answer type="text" class="form-control" placeholder="Введи ответ">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col text-center">
+    <button type="button" class="btn btn-primary" (click)="try_answer(answer.value)">Primary</button>
+  </div>
+</div>
