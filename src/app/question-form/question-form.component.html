@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col">
+    <div #errorAlert class="alert alert-danger mt-4 mb-4 p-2 d-none" role="alert">
+      Попробуй еще раз. Или скажи Сене что-то приятное, может он подскажет
+    </div>
     <div class="input-group mt-4 mb-4 p-2">
       <input #answer type="text" class="form-control" placeholder="Введи ответ">
     </div>
@@ -7,6 +10,6 @@
 </div>
 <div class="row">
   <div class="col text-center">
-    <button type="button" class="btn btn-primary" (click)="try_answer(answer.value)">Primary</button>
+    <button type="button" class="btn btn-primary" (click)="try_answer(answer.value, errorAlert)">Primary</button>
   </div>
 </div>

@@ -20,13 +20,15 @@ export class QuestionFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  try_answer(answer: string): void {
+  try_answer(answer: string, errorAlert: HTMLDivElement): void {
     answer = answer.toLowerCase();
     if (this.expectedAnswer.indexOf(answer) >= 0) {
       console.log('answer is correct,  redirecting to ' + this.nextStepUrl);
+      errorAlert.classList.add('d-none');
       this.router.navigateByUrl(this.nextStepUrl)
     } else {
-      console.log('answer is incorrect')
+      console.log('answer is incorrect');
+      errorAlert.classList.remove('d-none');
     }
     console.log(answer)
   }
